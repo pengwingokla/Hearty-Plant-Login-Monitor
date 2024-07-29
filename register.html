@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+    </style>
+    <title>Hearty Plant Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- HP Logo -->
+            <div class="logo">
+                <img src="hplogo.svg" alt="Hearty Plant Logo"> <!-- Make sure to replace 'logo.png' with your actual logo file -->
+            </div>
+
+            <div class="header">
+                <h2>Hello, Green Thumb! 
+                <p> Log in to keep your plants thriving with our smart hydroponic monitoring system. </p></h2>
+            </div>
+
+            <div class="tabs">
+                <button type="button" class="tab" id="loginTab" onclick="window.location.href='login.html';">Login</button>
+                <button type="button" class="tab" id="regisTab" onclick="window.location.href='register.html';">Register</button>
+                <span class="glider"></span>
+            </div>
+            <!-- Regiser Form -->
+            <!-- Username and Password -->
+            <form class="input-container" id="login-form" action="/submit-login" method="POST">
+                <i class='bx bx-user' ></i>
+                <input type="text" id="username" placeholder="Username" name="username" required>
+                <i class='bx bx-envelope'></i>
+                <input type="text" id="email" placeholder="Email" name="email" required>
+                <i class='bx bx-lock-alt' ></i>
+                <input type="password" id="password" placeholder="Password" name="password" required>            
+            </form>
+            
+            <!-- Action -->
+            <div class="terms">
+                <!-- Terms and conditions checkbox -->
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="/terms">Terms and Conditions</a>.</label>
+            </div>
+            <div class="action-container">
+                <!-- Register Button -->
+                <button type="submit" class="google-btn"> <img src="google_icon.png" alt="Google logo"> Continue with Google </button>
+                <button type="submit" class="register-btn"> Register </button>
+            </div>
+        </div>
+        <div class="image-section">
+            <!-- Image Content -->
+            <img src="hydroponic_bg.jpg" alt="Decorative image">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+:root {
+    /* Color Scheme */
+    --dark-green-color: #159945;
+    --light-green-color: #AED6BC; 
+    --black-color: #000000; 
+    --light-grey-color: #A5A5AC; 
+    --dark-grey-color: #A5A5AC; 
+    --white-color: #ffffff;
+    --google-grey: #f1f1f1;
+    --google-blue: #4285F4;
+
+    /* Fonts */
+    --font-family: "Lato", sans-serif;
+
+    /* Font Sizes */
+    --font-size-large: 1.25rem; /* Large text */
+    --font-size-regular: 1rem;  /* Regular body text */
+    --font-size-small: 0.875rem;/* Small text */
+
+    /* Border and radius */
+    --button-height: 40px;
+    --border-radius: 99px;      /* Border radius for buttons and inputs */
+
+    /* Form item width */
+    --form-max-width: 500px;
+    --form-item-width: 80%;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: relative;
+    padding: 20px;
+    max-width: 500px;
+    /* background-color: aliceblue; */
+}
+
+.image-section {
+    flex: 1; /* Takes up the other half of the container */
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px
+}
+
+.header h2 {
+    padding: 20px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-regular);
+    font-weight: 400;
+    align-items: center;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    background-color: var(--light-green-color);
+    position: relative;
+    display: flex;
+    width: var(--form-item-width);
+    height: 50px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+.tab {    
+    z-index: 1;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px 60px;
+    cursor: pointer;
+    font-size: var(--font-size-small);
+    color: var(--black-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab.selected {
+    color: #ffff;
+}
+
+.glider {
+    left: 5px;
+    background-color: var(--dark-green-color);
+    position: absolute;
+    top: 5px;
+    height: var(--button-height);
+    width: 179px;
+    border-radius: var(--border-radius);
+    transition: transform 0.25s ease-out;
+    transform: translateX(0%); /* Start under the Login tab */
+}
+
+input[id="radio-2"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(100%);
+		}
+	}
+}
+/* Username and Password */
+.input-container {
+    /* background-color: #c8e8d3; */
+    position: relative;
+    height: 100%;
+    margin-top: 30px;
+    width: var(--form-item-width);
+}
+  
+.input-container i {
+    position: absolute;
+    margin-top: 15px;
+    padding: 13px;
+}
+
+.input-container input {
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    font-size: var(--font-size-small);
+    padding: 20px 35px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    outline: none;
+}
+
+.input-container input:focus {
+    border-color: var(--dark-green-color); /* Changes border color on focus */
+}
+
+/* Forgot password */
+.forgot-container { 
+    width: var(--form-item-width);   
+    display: flex;
+    flex-direction: column;
+}
+.forgot-container a{
+    color: var(--google-blue);
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.action-container {
+    width: var(--form-item-width);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.login-btn {
+    padding: 10px 40px;
+    background-color: var(--dark-green-color);
+    font-size: var(--font-size-small);
+    border-radius: var(--border-radius);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.google-btn {
+    padding: 10px 40px;
+    font-size: var(--font-size-small);
+    background-color: var(--google-grey);
+    color: var(--black-color);
+    border: none;
+    border-radius: 70px;
+    display: flex;
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+
